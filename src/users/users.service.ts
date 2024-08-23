@@ -21,6 +21,7 @@ export class UsersService {
 
   async findAll() {
     try {
+     
       return this.prisma.users.findMany();
     } catch (error) {
       throw new HttpException(error, HttpStatus.FORBIDDEN);
